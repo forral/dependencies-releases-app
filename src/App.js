@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
-import ReleaseList from './components/ReleaseList/ReleaseList'
+import Releases from './pages/Releases/Releases'
 
 function App() {
     return (
         <div className='App'>
             <Container>
-                <ReleaseList />
+                <Releases />
             </Container>
         </div>
     )
