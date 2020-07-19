@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReleasesList from '../../components/ReleaseList/ReleaseList'
 
 const MOCK_DATA = [
@@ -52,13 +52,17 @@ const MOCK_DATA = [
 ]
 
 function Releases() {
-    // useEffect(() => {
-    //     fetch('https://api.github.com/repos/mbrn/material-table/releases/latest')
-    //         .then((response) => response.json())
-    //         .then((data) => console.log(data))
-    // }, [])
+    const [repos, setRepos] = useState([])
 
-    return <ReleasesList repository={MOCK_DATA} />
+    useEffect(() => {
+        // fetch('https://api.github.com/repos/mbrn/material-table/releases/latest')
+        //     .then((response) => response.json())
+        //     .then((data) => console.log(data))
+
+        setRepos(MOCK_DATA)
+    }, [])
+
+    return <ReleasesList repository={repos} />
 }
 
 export default Releases

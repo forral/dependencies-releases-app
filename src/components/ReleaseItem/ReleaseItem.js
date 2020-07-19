@@ -1,5 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { Item } from 'semantic-ui-react'
+
+const propTypes = {
+    published_at: PropTypes.string,
+    name: PropTypes.string,
+    body: PropTypes.string,
+}
+
+const defaultProps = {
+    published_at: '',
+    name: '',
+    body: '',
+}
 
 function ReleaseItem(props) {
     const { published_at, name, body } = props
@@ -18,4 +32,8 @@ function ReleaseItem(props) {
         </Item.Group>
     )
 }
+
+ReleaseItem.propTypes = propTypes
+ReleaseItem.defaultProps = defaultProps
+
 export default ReleaseItem
