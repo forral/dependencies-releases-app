@@ -1,4 +1,4 @@
-const sum = require('./utils')
+import sum from './utils'
 
 console.log(sum)
 
