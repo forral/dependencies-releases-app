@@ -22,10 +22,10 @@ function ReleaseItem(props) {
         <Item.Group>
             <Item>
                 <Item.Content>
-                    <Item.Header>{name}</Item.Header>
-                    <Item.Meta>{published_at}</Item.Meta>
+                    <Item.Header data-testid='version-number'>{name}</Item.Header>
+                    <Item.Meta data-testid='version-date'>{published_at}</Item.Meta>
                     <Item.Description>
-                        <p>{body}</p>
+                        <p data-testid='version-description'>{body}</p>
                     </Item.Description>
                 </Item.Content>
             </Item>
